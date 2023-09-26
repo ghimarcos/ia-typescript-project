@@ -1,13 +1,53 @@
+// {
+//     "compilerOptions": {
+//       "target": "es2022",
+//       "module": "commonjs",
+//       "outDir": "./dist",
+//       "rootDir": "./src",
+//       "strict": true,
+//       "esModuleInterop": true
+//     },
+//     "include": [
+//       "./src/**/*.ts"
+//     ]
+//   }
+
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",  // Defina o target para ES2017 ou superior
+//     "module": "esnext",  // Habilite o top-level await
+//     "outDir": "./dist",
+//     "rootDir": "./src",
+//     "strict": true,
+//     "esModuleInterop": true,
+//   },
+//   "include": [
+//     "./src/**/*.ts"
+//   ]
+// }
+
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "CommonJS",
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "strict": true,
-      "esModuleInterop": true
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2022",
+    "lib": [
+      "es2022",
+      "dom"
+    ],
+    "paths": {
+      "stream": ["./node_modules/stream-browserify"],
     },
-    "include": [
-      "./src/**/*.ts"
-    ]
-  }
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
